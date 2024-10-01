@@ -8,23 +8,23 @@
 import Foundation
 
 public struct BaseResponse<T: Decodable>: Decodable {
-    let statusCode: Int
-    let message: String
-    let data: T
+    public let statusCode: Int
+    public let message: String
+    public let data: T
 }
 
 public struct MultipleMedia: Codable {
-    let media: [Media]
+    public let media: [Media]
 }
 
 // Data model for the file
 public struct Media: Codable {
-    let id: Int
-    let organizationId: Int
-    let name: String
-    let url: String
-    let key: String
-    let bucket: String
+    public let id: Int
+    public let organizationId: Int
+    public let name: String
+    public let url: String
+    public let key: String
+    public let bucket: String
     let mimetype: String
     let size: Double
     let updatedAt: String
@@ -32,7 +32,7 @@ public struct Media: Codable {
 }
 
 public struct MediaMetadata: Decodable {
-    let format: String
+    public let format: String
     let size: Int
     let width: Int
     let height: Int
