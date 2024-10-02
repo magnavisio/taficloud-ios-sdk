@@ -5,143 +5,85 @@ import Foundation
 @available(iOS 13.0, *)
 public class TafiCloud {
     private let apiKey: String
+    private let baseURL: URL
     
     public init(apiKey: String) {
         self.apiKey = apiKey
+        self.baseURL = URL(string: "https://stash.taficloud.com/media")!
     }
-    
-    //private let baseUrl = "https://stash.taficloud.com/media"
-    private let baseUrl = "https://dev-stash.taficloud.com/media"
     
     
     public func upload(file: Data, fileName: String, folder: String?) async throws -> BaseResponse<Media> {
-        let url = URL(string: "\(baseUrl)/upload")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        let endpoint = "upload"
+        let formData = MultipartFormData()
         
-        // Prepare the request body
-        let boundary = "Boundary-\(UUID().uuidString)"
-        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        
-        var body = Data()
-        
-        if let folder {
-        // Append the folder to the form data
-            body.append("--\(boundary)\r\n".data(using: .utf8)!)
-            body.append("Content-Disposition: form-data; name=\"folder\"\r\n\r\n".data(using: .utf8)!)
-            body.append("\(folder)\r\n".data(using: .utf8)!)
+        if let folder = folder {
+            formData.append(folder.data(using: .utf8)!, withName: "folder")
         }
-        body.append("--\(boundary)\r\n".data(using: .utf8)!)
-        body.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(fileName)\"\r\n".data(using: .utf8)!)
-        body.append("Content-Type: application/octet-stream\r\n\r\n".data(using: .utf8)!)
-        body.append(file)
-        body.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
         
-        request.httpBody = body
+        formData.append(file, withName: "file", fileName: fileName, mimeType: "application/octet-stream")
         
-        // Send the request
-        let (data, response) = try await URLSession.shared.data(for: request)
-        
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw UploadError(statusCode: -1, message: "Invalid response")
-        }
-        if (200...299).contains(httpResponse.statusCode) {
-            let uploadResponse = try JSONDecoder().decode(BaseResponse<Media>.self, from: data)
-            return uploadResponse
-        } else {
-            let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: data)
-            let errorMessage = errorResponse?.message ?? "Unknown error"
-            throw UploadError(statusCode: httpResponse.statusCode, message: errorMessage)
-        }
-    }
-    
-    
-    func fetchMediaMetadata(mediaKey: String) async throws -> BaseResponse<MediaMetadata> {
-        let url = URL(string: "\(baseUrl)/metadata?mediaKey=\(mediaKey)")! // Replace with your actual URL
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-        
-        let (data, response) = try await URLSession.shared.data(for: request)
-
-        // Handle the response
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw UploadError(statusCode: -1, message: "Invalid response")
-        }
-
-        if (200...299).contains(httpResponse.statusCode) {
-            // Successful response
-            let mediaMetadataResponse = try JSONDecoder().decode(BaseResponse<MediaMetadata>.self, from: data)
-            return mediaMetadataResponse
-        } else {
-            let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: data)
-            let errorMessage = errorResponse?.message ?? "Unknown error"
-            throw UploadError(statusCode: httpResponse.statusCode, message: errorMessage)
-        }
-    }
-    
-    @available(iOS 13.0, *)
-    func convertMedia(mediaKey: String, format: String) async throws -> BaseResponse<Media> {
-        let url = URL(string: "\(baseUrl)/convert")! // Replace with your actual URL
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        // Create the JSON payload
-        let payload: [String: Any] = [
-            "mediaKey": mediaKey,
-            "format": format
-        ]
-        
-        // Convert payload to JSON data
-        let jsonData = try JSONSerialization.data(withJSONObject: payload, options: [])
-
-        request.httpBody = jsonData
-
-        let (data, response) = try await URLSession.shared.data(for: request)
-
-        // Handle the response
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid response"])
-        }
-
-        if (200...299).contains(httpResponse.statusCode) {
-            // Successful response
-            let mediaResponse = try JSONDecoder().decode(BaseResponse<Media>.self, from: data)
-            return mediaResponse
-        } else {
-            let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: data)
-            let errorMessage = errorResponse?.message ?? "Unknown error"
-            throw UploadError(statusCode: httpResponse.statusCode, message: errorMessage)
-        }
+        return try await createRequest(endpoint: endpoint, method: .post, formData: formData)
     }
 
     
-    func mergeFiles(files: [Data]) async throws -> BaseResponse<MultipleMedia> {
+    
+    public func fetchMediaMetadata(mediaKey: String) async throws -> BaseResponse<MediaMetadata> {
+        let endpoint = "metadata?mediaKey=\(mediaKey)"
+        
+        return try await createRequest(endpoint: endpoint, method: .get, formData: MultipartFormData())
+    }
+
+    
+    public func convertMedia(mediaKey: String, format: String) async throws -> BaseResponse<Media> {
+        let formData = MultipartFormData()
+        formData.append(mediaKey.data(using: .utf8)!, withName: "mediaKey")
+        formData.append(format.data(using: .utf8)!, withName: "format")
+
+        return try await createRequest(endpoint: "convert", method: .post, formData: formData)
+    }
+
+
+    
+    public func uploadMultipleFiles(files: [Data]) async throws -> BaseResponse<MultipleMedia> {
         let formData = MultipartFormData()
 
         // Add files to the form data
         for (index, file) in files.enumerated() {
             formData.append(file, withName: "files[]", fileName: "file\(index + 1).txt", mimeType: "application/octet-stream")
         }
+        return try await createRequest(endpoint: "upload/multiple", method: .post, formData: formData)
+    }
+    
+    // Upload base64-encoded files
+    public func uploadBase64File(base64String: String, mimetype: String, folder: String?) async throws -> BaseResponse<Media> {
+        let formData = MultipartFormData()
+
+        formData.append(base64String.data(using: .utf8)!, withName: "file")
+        formData.append(mimetype.data(using: .utf8)!, withName: "mimetype")
+
+        if let folder = folder {
+            formData.append(folder.data(using: .utf8)!, withName: "folder")
+        }
         
-        let url = URL(string: "\(baseUrl)/upload/multiple")!
+        return try await createRequest(endpoint: "upload/base64", method: .post, formData: formData)
+    }
+
+    private func createRequest<T: Decodable>(endpoint: String, method: HTTPMethod, formData: MultipartFormData) async throws -> BaseResponse<T> {
+        let url = baseURL.appendingPathComponent(endpoint)
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = method.rawValue
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         request.setValue("multipart/form-data; boundary=\(formData.boundary)", forHTTPHeaderField: "Content-Type")
         request.httpBody = formData.finish()
-        
-        // Send the request
+
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse else {
             throw UploadError(statusCode: -1, message: "Invalid response")
         }
         if (200...299).contains(httpResponse.statusCode) {
-            let uploadResponse = try JSONDecoder().decode(BaseResponse<MultipleMedia>.self, from: data)
+            let uploadResponse = try JSONDecoder().decode(BaseResponse<T>.self, from: data)
             return uploadResponse
         } else {
             let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: data)

@@ -25,37 +25,37 @@ public struct Media: Codable {
     public let url: String
     public let key: String
     public let bucket: String
-    let mimetype: String
-    let size: Double
-    let updatedAt: String
-    let createdAt: String
+    public let mimetype: String
+    public let size: Double
+    public let updatedAt: String
+    public let createdAt: String
 }
 
 public struct MediaMetadata: Decodable {
     public let format: String
-    let size: Int
-    let width: Int
-    let height: Int
-    let space: String
-    let channels: Int
-    let depth: String
-    let density: Int
-    let isProgressive: Bool
-    let hasProfile: Bool
-    let hasAlpha: Bool
+    public let size: Int
+    public let width: Int
+    public let height: Int
+    public let space: String
+    public let channels: Int
+    public let depth: String
+    public let density: Int
+    public let isProgressive: Bool
+    public let hasProfile: Bool
+    public let hasAlpha: Bool
 }
 
 public struct ErrorResponse: Decodable {
-    let statusCode: Int
-    let path: String
-    let message: String
+    public let statusCode: Int
+    public let path: String
+    public let message: String
 }
 
 public struct UploadError: Error {
-    let statusCode: Int
-    let message: String
+    public let statusCode: Int
+    public let message: String
 
-    var localizedDescription: String {
+    public var localizedDescription: String {
         return "Error \(statusCode): \(message)"
     }
 }

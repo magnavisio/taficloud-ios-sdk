@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		1FCB3C4B2CAD49E300CA43A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCB3C322CAD49E100CA43A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FCB3C392CAD49E100CA43A8;
+			remoteInfo = Taficloudsample;
+		};
+		1FCB3C552CAD49E300CA43A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCB3C322CAD49E100CA43A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FCB3C392CAD49E100CA43A8;
+			remoteInfo = Taficloudsample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FCB3C3A2CAD49E100CA43A8 /* Taficloudsample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taficloudsample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCB3C4A2CAD49E300CA43A8 /* TaficloudsampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaficloudsampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCB3C542CAD49E300CA43A8 /* TaficloudsampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaficloudsampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1FCB3C3C2CAD49E100CA43A8 /* Taficloudsample */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Taficloudsample;
+			sourceTree = "<group>";
+		};
+		1FCB3C4D2CAD49E300CA43A8 /* TaficloudsampleTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TaficloudsampleTests;
+			sourceTree = "<group>";
+		};
+		1FCB3C572CAD49E300CA43A8 /* TaficloudsampleUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TaficloudsampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FCB3C372CAD49E100CA43A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCB3C472CAD49E300CA43A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCB3C512CAD49E300CA43A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FCB3C312CAD49E100CA43A8 = {
+			isa = PBXGroup;
+			children = (
+				1FCB3C3C2CAD49E100CA43A8 /* Taficloudsample */,
+				1FCB3C4D2CAD49E300CA43A8 /* TaficloudsampleTests */,
+				1FCB3C572CAD49E300CA43A8 /* TaficloudsampleUITests */,
+				1FCB3C3B2CAD49E100CA43A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FCB3C3B2CAD49E100CA43A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB3C3A2CAD49E100CA43A8 /* Taficloudsample.app */,
+				1FCB3C4A2CAD49E300CA43A8 /* TaficloudsampleTests.xctest */,
+				1FCB3C542CAD49E300CA43A8 /* TaficloudsampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FCB3C392CAD49E100CA43A8 /* Taficloudsample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FCB3C5E2CAD49E300CA43A8 /* Build configuration list for PBXNativeTarget "Taficloudsample" */;
+			buildPhases = (
+				1FCB3C362CAD49E100CA43A8 /* Sources */,
+				1FCB3C372CAD49E100CA43A8 /* Frameworks */,
+				1FCB3C382CAD49E100CA43A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1FCB3C3C2CAD49E100CA43A8 /* Taficloudsample */,
+			);
+			name = Taficloudsample;
+			packageProductDependencies = (
+			);
+			productName = Taficloudsample;
+			productReference = 1FCB3C3A2CAD49E100CA43A8 /* Taficloudsample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FCB3C492CAD49E300CA43A8 /* TaficloudsampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FCB3C612CAD49E300CA43A8 /* Build configuration list for PBXNativeTarget "TaficloudsampleTests" */;
+			buildPhases = (
+				1FCB3C462CAD49E300CA43A8 /* Sources */,
+				1FCB3C472CAD49E300CA43A8 /* Frameworks */,
+				1FCB3C482CAD49E300CA43A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FCB3C4C2CAD49E300CA43A8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FCB3C4D2CAD49E300CA43A8 /* TaficloudsampleTests */,
+			);
+			name = TaficloudsampleTests;
+			packageProductDependencies = (
+			);
+			productName = TaficloudsampleTests;
+			productReference = 1FCB3C4A2CAD49E300CA43A8 /* TaficloudsampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FCB3C532CAD49E300CA43A8 /* TaficloudsampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FCB3C642CAD49E300CA43A8 /* Build configuration list for PBXNativeTarget "TaficloudsampleUITests" */;
+			buildPhases = (
+				1FCB3C502CAD49E300CA43A8 /* Sources */,
+				1FCB3C512CAD49E300CA43A8 /* Frameworks */,
+				1FCB3C522CAD49E300CA43A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FCB3C562CAD49E300CA43A8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FCB3C572CAD49E300CA43A8 /* TaficloudsampleUITests */,
+			);
+			name = TaficloudsampleUITests;
+			packageProductDependencies = (
+			);
+			productName = TaficloudsampleUITests;
+			productReference = 1FCB3C542CAD49E300CA43A8 /* TaficloudsampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FCB3C322CAD49E100CA43A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					1FCB3C392CAD49E100CA43A8 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					1FCB3C492CAD49E300CA43A8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1FCB3C392CAD49E100CA43A8;
+					};
+					1FCB3C532CAD49E300CA43A8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1FCB3C392CAD49E100CA43A8;
+					};
+				};
+			};
+			buildConfigurationList = 1FCB3C352CAD49E100CA43A8 /* Build configuration list for PBXProject "Taficloudsample" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FCB3C312CAD49E100CA43A8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1FCB3C3B2CAD49E100CA43A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FCB3C392CAD49E100CA43A8 /* Taficloudsample */,
+				1FCB3C492CAD49E300CA43A8 /* TaficloudsampleTests */,
+				1FCB3C532CAD49E300CA43A8 /* TaficloudsampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FCB3C382CAD49E100CA43A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCB3C482CAD49E300CA43A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCB3C522CAD49E300CA43A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FCB3C362CAD49E100CA43A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCB3C462CAD49E300CA43A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCB3C502CAD49E300CA43A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FCB3C4C2CAD49E300CA43A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FCB3C392CAD49E100CA43A8 /* Taficloudsample */;
+			targetProxy = 1FCB3C4B2CAD49E300CA43A8 /* PBXContainerItemProxy */;
+		};
+		1FCB3C562CAD49E300CA43A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FCB3C392CAD49E100CA43A8 /* Taficloudsample */;
+			targetProxy = 1FCB3C552CAD49E300CA43A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1FCB3C5C2CAD49E300CA43A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FCB3C5D2CAD49E300CA43A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FCB3C5F2CAD49E300CA43A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Taficloudsample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magnavisio.Taficloudsample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FCB3C602CAD49E300CA43A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Taficloudsample/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magnavisio.Taficloudsample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FCB3C622CAD49E300CA43A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magnavisio.TaficloudsampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Taficloudsample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Taficloudsample";
+			};
+			name = Debug;
+		};
+		1FCB3C632CAD49E300CA43A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magnavisio.TaficloudsampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Taficloudsample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Taficloudsample";
+			};
+			name = Release;
+		};
+		1FCB3C652CAD49E300CA43A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magnavisio.TaficloudsampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Taficloudsample;
+			};
+			name = Debug;
+		};
+		1FCB3C662CAD49E300CA43A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.magnavisio.TaficloudsampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Taficloudsample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FCB3C352CAD49E100CA43A8 /* Build configuration list for PBXProject "Taficloudsample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCB3C5C2CAD49E300CA43A8 /* Debug */,
+				1FCB3C5D2CAD49E300CA43A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FCB3C5E2CAD49E300CA43A8 /* Build configuration list for PBXNativeTarget "Taficloudsample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCB3C5F2CAD49E300CA43A8 /* Debug */,
+				1FCB3C602CAD49E300CA43A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FCB3C612CAD49E300CA43A8 /* Build configuration list for PBXNativeTarget "TaficloudsampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCB3C622CAD49E300CA43A8 /* Debug */,
+				1FCB3C632CAD49E300CA43A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FCB3C642CAD49E300CA43A8 /* Build configuration list for PBXNativeTarget "TaficloudsampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCB3C652CAD49E300CA43A8 /* Debug */,
+				1FCB3C662CAD49E300CA43A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FCB3C322CAD49E100CA43A8 /* Project object */;
+}
